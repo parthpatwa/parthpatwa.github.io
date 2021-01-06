@@ -1,1 +1,393 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Parth Patwa</title>
+      <link rel="icon" href="./assets/favicon.png" />
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+      />
+      <link rel="stylesheet" href="./index.css" />
+      <script
+         src="https://kit.fontawesome.com/6bea53be50.js"
+         crossorigin="anonymous"
+      ></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+         $(document).ready(function () {
+            $(document).on("scroll", onScroll);
+            // Add smooth scrolling to all links
+            $("a").on("click", function (event) {
+               // Make sure this.hash has a value before overriding default behavior
+               if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+
+                  // Store hash
+                  var hash = this.hash;
+
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $("html, body").animate(
+                     {
+                        scrollTop: $(hash).offset().top,
+                     },
+                     800,
+                     function () {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                     }
+                  );
+               } // End if
+            });
+         });
+
+         function onScroll(event) {
+            var scrollPos = $(document).scrollTop();
+            $(".nav a").each(function () {
+               var currLink = $(this);
+               var refElement = $(currLink.attr("href"));
+               if (
+                  refElement.position().top - 100 <= scrollPos &&
+                  refElement.position().top + refElement.height() > scrollPos
+               ) {
+                  $(".nav ul li a").removeClass("active");
+                  currLink.addClass("active");
+               } else {
+                  currLink.removeClass("active");
+               }
+            });
+         }
+
+         function toggleNav() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "navbar") {
+               x.className = "responsive";
+            } else {
+               x.className = "navbar";
+            }
+         }
+
+         function toggleNav1() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "responsive") {
+               x.className = "navbar";
+            }
+         }
+      </script>
+   </head>
+   <body>
+      <div class="navbar" id="myTopnav">
+         <a href="#" class="logo">Parth <span>Patwa</span></a>
+         <ul class="nav">
+            <li>
+               <a href="#goAbout" class="active" onclick="toggleNav1()">Home</a>
+            </li>
+            <li><a href="#goNews" onclick="toggleNav1()">News</a></li>
+            <!-- <li><a href="#goWork" onclick="toggleNav1()">Work</a></li>
+            <li><a href="#goTeaching" onclick="toggleNav1()">Teaching</a></li> -->
+            <li><a href="#goPublic" onclick="toggleNav1()">Publications</a></li>
+            <a href="#" class="burgericon" onclick="toggleNav()">
+               <i class="fa fa-bars"></i>
+            </a>
+         </ul>
+      </div>
+
+      <div class="first" id="goAbout">
+         <div class="card">
+            <img src="assets/parth.jpg" alt="Parth Image" />
+            <h1>Parth Patwa</h1>
+            <h2>Senior Undergrad</h2>
+            <h3>IIIT Sri City</h3>
+            <div class="social">
+               <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+               <a href="https://scholar.google.com/citations?user=nlpQCpsAAAAJ&hl=en" target="_blank"
+                  ><i class="ai ai-google-scholar ai-3x"></i
+               ></a>
+               <a href="https://github.com/parthpatwa" target="_blank"><i class="fab fa-github"></i></a>
+               <a href="https://www.linkedin.com/in/parth-patwa/" target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+               ></a>
+               <a href="https://parthpatwa1.medium.com/" target="_blank"><i class="fab fa-medium-m"></i></a>
+               <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+            </div>
+            <a href="./assets/parth_patwa.pdf" target="_blank" class="resume"
+               >curriculum vitae <i class="fas fa-long-arrow-alt-right"></i
+            ></a>
+            <!-- <a href="#" target="_blank" class="resume"
+               >Resume <i class="fas fa-long-arrow-alt-right"></i
+            ></a> -->
+         </div>
+         <div class="out_about">
+            <div class="about">
+               <h2>About Me</h2>
+               <p>
+                  I am a senior undergrad at IIIT Sri City, pursuing B.Tech in CSE. I am a researcher and a learner. My interests are Natural Language Processing, Machine Learning, Social Computing, and Computer Vision. I am passionate about research in the aforementioned fields. I believe that grit, tenacity, and determination are my biggest strengths. 
+               </p>
+               <p>
+                  I am working as a researcher at the <a href = "https://www.pathcheck.org/" target="_blank" >PathCheck Foundation </a> advised by  <a href ="https://web.media.mit.edu/~raskar/" target="_blank" >Dr. Ramesh Raskar</a>. At PathCheck, I work on COVID-19 outbreak prediction, ML for digital contact tracing, and writing survey papers related to vaccine and testing challenges. I have been fortunate to be advised by <a href ="http://www.amitavadas.com/" target="_blank">Dr. Amitava Das </a> throughout my undergraduate studies. Under his guidance, I worked on aggression, hate-speech, and misogyny detection in social media. I hope this work takes a step towards making social media a safer place for women and minorities. I also worked on sentiment analysis of code-mixed tweets and COVID-19 fake news detection. Previously I interned at <a href = "https://www.hike.in/" target="_blank" >Hike Messenger</a> where I worked on clustering semantically similar chat messages to improve sticker recommendation.
+               </p>
+               <p>
+                  I am the President and Founder of <a href = "https://epochiiits.github.io/about.html" target="_blank"> Epoch</a>, which is the AIML club at IIITS. At Epoch, we give talks on ML topics, conduct paper reading sessions, hands-on tutorials, organize hackathons, workshops, and paper reading sessions. We also take efforts to encourage female participation in our events. 
+               </p>
+               <p>
+                  I like to read fiction (thrillers, mystery, fantasy, drama) and sometimes non-fiction. I have been playing <a href  = "https://www.chess.com/member/gotenx" target="_blank">chess </a> for almost 10 years. Earlier I used to play professional chess, now I play it for fun. Currently, I am learning to <a href = "https://drive.google.com/file/d/19qP4aNCBCRNAhAvlxxm3LhlcF-PJosgk/view?usp=sharing" target="_blank" >play the guitar </a>. I love to travel to and explore new destinations. I also enjoy watching cricket, trekking, running, and adventure sports. 
+               </p>
+               <div class="extra">
+                  <div class="one">
+                     <span>Interest</span>
+                     <ul>
+                        <li>Machine Learnging and Deep Learning</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computational Social Science</li>
+                        <li> ML for HealthTech </li>
+                        <li>Computer Vision</li>
+                     </ul>
+                  </div>
+                  <div class="two">
+                     <span>Education</span>
+                     <p>
+                        <i class="fas fa-graduation-cap"></i>
+                        B.Tech. in Computer Science and Engineering, 2021 <br />
+                        <span>IIIT Sri City</span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="second" id="goNews">
+         <div class="left">News</div>
+         <div class="right">
+            <ul>
+               <li>
+                  <span>Feb 2021:</span> Will be organizing and presenting 2 papers at the <a href = "http://lcs2.iiitd.edu.in/CONSTRAINT-2021/" target = "_blank">CONSTRAINT workshop </a> co-located witih <a href = "https://aaai.org/Conferences/AAAI-21/" target = "_blank" >AAAI 2021</a>. 
+               </li>
+               <li>
+                  <span>Dec 2020:</span> <a href = "https://www.researchgate.net/profile/Sheshank_Shankar/publication/344197790_Proximity_Sensing_Modeling_and_Understanding_Noisy_RSSI-BLE_Signals_and_Other_Mobile_Sensor_Data_for_Digital_Contact_Tracing/links/5fc5cede4585152e9be8266f/Proximity-Sensing-Modeling-and-Understanding-Noisy-RSSI-BLE-Signals-and-Other-Mobile-Sensor-Data-for-Digital-Contact-Tracing.pdf" target = "_blank"> Paper on digital contact tracing </a> accepted at <a href = https://www.comsoc.org/conferences-events/international-conference-advanced-communication-technology-2021 target = "_blank">IEEE ICACT 2021</a>. 
+               </li>
+               <li>
+                  <span>Dec 2020:</span> Presented a poster at the <a href="https://sites.google.com/view/ml4mobilehealth-neurips-2020/home" target="_blank"> Machine learning for Mobile Health workshop</a>  at <a href = "https://nips.cc/" ratget = "_blank">NeurIPS 2020</a>. Received registration grant for the same. 
+               </li>
+               <li>
+                  <span>Dec 2020:</span> Paper on aggression detection accepted and presented at <a href = "https://www.iitp.ac.in/~ai-nlp-ml/icon2020/main_prog.html" target = "_blank">ICON 2020</a>.
+               </li>
+               <li><span>Dec 2020:</span>  Orally presented our <a href = "https://arxiv.org/abs/2008.04277" target="_blank">overview paper of SemEval task 9 (SentiMix) </a> at <a href = https://alt.qcri.org/semeval2020/ target="_blank"> SemEval 2020<a>, co-located with <a href = "https://coling2020.org/" target="_blank"> COLING 2020.</a> </li>
+               <li>
+                  <span>Nov 2020:</span> Reached the finals of <a href = "https://www.symptomchallenge.org/" target="_blank"> The COVID-19 Symptom Data Challenge<a> organized by Facebook, CMU, and UMD. Won $5000 to further develop the proposed solution.  
+               </li>
+               <li>
+                  <span>Nov 2020:</span> Presented a poster on <a href = "https://www.researchgate.net/publication/348168922_COVID-19_Outbreak_Prediction_and_Analysis_using_Self_Reported_Symptoms" target="_blank"> COVID-19 outbreak prediction</a> at the <a href="https://ai.engin.umich.edu/events/2020-ai-symposium/" target="_blank"> University of Michigan AI symposium 2020</a>. 
+               </li>
+               <li>
+                  <span>Sep 2020:</span> <a href = "https://www.pathcheck.org/" target="_blank" >PathCheck Foundation </a> led by <a href ="https://web.media.mit.edu/~raskar/" target="_blank" >Dr. Ramesh Raskar </a> as a data science researcher. I will be working on applying Machine Learning to help fight the COVID-19 pandemic. 
+               </li>
+               <li>
+                  <span>May 2020:</span> Presented our <a href = "https://www.aclweb.org/anthology/2020.trac-1.20/" target="_blank"> paper on misogyny and aggression detection </a> at <a href ="https://sites.google.com/view/trac2/program?authuser=0" target = "_blank" >TRAC2 </a> co-located with <a href = "https://lrec2020.lrec-conf.org/en/" target = "_blank"> LREC 2020</a>.
+               </li>
+               <li>
+                  <span>Feb 2020:</span> Attended <a href="https://aaai.org/Conferences/AAAI-20/" target="_blank"> AAAI 2020 </a> in NYC to collect the 'innovative application award' for our <a href = "https://arxiv.org/abs/1902.02704" target = "_blank" >paper on sticker recommendation</a>. Received AAAI travel grant. Met and talked to the godfather of Deep Learning and Turing award winner, Dr. Geoffery Hinton!!!
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <!-- OPTIONAL SPACE STARTS -->
+
+      <!-- <div class="fourth" id="goWork">
+         <div class="left">Work</div>
+         <div class="right">
+            This is content sectionThis is content sectionThis is content
+            sectionThis is content sectionThis is content sectionThis is content
+            sectionThis is content section
+         </div>
+      </div>
+      <div class="fifth" id="goTeaching">
+         <div class="left">Teaching</div>
+         <div class="right">
+            This is content sectionThis is content sectionThis is content
+            sectionThis is content sectionThis is content sectionThis is content
+            section
+         </div>
+      </div> -->
+
+      <!-- OPTIONAL SPACE ENDS -->
+
+      <div class="third" id="goPublic">
+         <div class="left">
+            Selected Publications<a href="https://scholar.google.co.in/citations?user=nlpQCpsAAAAJ&hl=en&oi=ao" target="_blank">
+               <br />Visit google scholar for the complete list
+               <i class="fas fa-link"></i>
+            </a>
+         </div>
+
+         <div class="right">
+            <div class="card">
+               <div class="content">
+                  <!-- INLINE STYLES ARE APPLIED HERE -->
+                  <p>
+                     Fighting an Infodemic: COVID-19 Fake News Dataset
+                  </p>
+                  <p>
+                     in proceedings of CONSTRAINT Workshop at AAAI 2021. 
+                  </p>
+                  <p>
+                     <span>Parth Patwa</span>, Shivam Sharma, Srinivas PYKL, Vineeth Guptha, Kumari Gitanjali, Md Shad Akhtar, Asif Ekbal, Das Amitava, Tanmoy Chakraborty
+                  </p>
+                  <div>
+                     <a href="https://arxiv.org/ftp/arxiv/papers/2011/2011.03327.pdf" target="_blank">Pdf</a>
+                     <a href="https://competitions.codalab.org/competitions/26655" target="_blank">data</a>
+                     <a href="https://github.com/parthpatwa/covid19-fake-news-detection" target="_blank">code</a>
+                  </div>
+               </div>
+               <div class="image">
+                  <img src="./assets/all_tokens_wordcloud.png" alt="some_image" />
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="content">
+                  <!-- INLINE STYLES ARE APPLIED HERE -->
+                  <p>
+                    Proximity Sensing: Modeling and Understanding Noisy RSSI-BLE Signals and Other Mobile Sensor Data for Digital Contact Tracing
+                  </p>
+                  <p>
+                     in proceedings of IEEE ICACT 2021. (also presented at machine learning for mobile health workshop at neurips 2020 )
+                  </p>
+                  <p>
+                     Sheshank Shankar, Rishank Kanaparti, Ayush Chopra, Rohan Sukumaran, <span>Parth Patwa</span>, Myungsun Kang, Abhishek Singh, Kevin P. McPherson, Ramesh Raskar
+                  </p>
+                  <div>
+                     <a href="https://www.researchgate.net/profile/Sheshank_Shankar/publication/344197790_Proximity_Sensing_Modeling_and_Understanding_Noisy_RSSI-BLE_Signals_and_Other_Mobile_Sensor_Data_for_Digital_Contact_Tracing/links/5fc5cede4585152e9be8266f/Proximity-Sensing-Modeling-and-Understanding-Noisy-RSSI-BLE-Signals-and-Other-Mobile-Sensor-Data-for-Digital-Contact-Tracing.pdf" target="_blank">Pdf</a>
+
+                  </div>
+               </div>
+               <div class="image">
+                  <img src="./assets/data_processing.png" alt="some_image" />
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="content">
+                  <!-- INLINE STYLES ARE APPLIED HERE -->
+                  <p>
+                     COVID-19 Outbreak Prediction and Analysis using Self Reported Symptoms
+                  </p>
+                  <p>
+                     ResearchGate (manuscript). 2020
+                  </p>
+                  <p>
+                     Rohan Sukumaran, <span>Patwa Parth</span>, T V Sethuraman, Kanaparti Shankar Sheshank, Joseph Rishank, Bae, Yash Mathur, Abhishek Singh, Ayush Chopra, Kang Myungsang, Priya Ramaswamy, Ramesh Raskar
+                  </p>
+                  <div>
+                     <a href="https://www.researchgate.net/publication/348168922_COVID-19_Outbreak_Prediction_and_Analysis_using_Self_Reported_Symptoms" target="_blank">Pdf</a>
+                  </div>
+               </div>
+               <div class="image">
+                  <img src="./assets/corr_sym_h_2.PNG" alt="some_image" />
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="content">
+                  <!-- INLINE STYLES ARE APPLIED HERE -->
+                  <p>
+                     Hater-O-Genius Aggression Classification using Capsule Networks
+                  </p>
+                  <p>
+                     in proceedings of ICON 2020
+                  </p>
+                  <p>
+                     <span>Parth Patwa</span>, Srinivas PYKL, Amitava Das, Prerana Mukherjee, Viswanath Pulabaigari
+                  </p>
+                  <div>
+                     <a href="https://drive.google.com/file/d/17QEz7RJmv-HZ5EXf8jq84Dd7o2xG4RTw/view?usp=sharing" target="_blank">Pdf</a>
+                     <a href="https://github.com/parthpatwa/Hater-O-Genius-Aggression-Classification-using-Capsule-Networks" target="_blank">code</a>
+
+                  </div>
+               </div>
+               <div class="image">
+                  <img src="./assets/output.png" alt="some_image" />
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="content">
+                  <!-- INLINE STYLES ARE APPLIED HERE -->
+                  <p>
+                     SemEval-2020 Task 9: Overview of Sentiment Analysis of Code-Mixed Tweets
+                  </p>
+                  <p>
+                     In proceedings of SemEval 2020
+                  </p>
+                  <p>
+                     <span>Parth Patwa</span>, Gustavo Aguilar, Sudipta Kar, Suraj Pandey, Srinivas PYKL, Björn Gambäck, Tanmoy Chakraborty, Thamar Solorio, Amitava Das
+                  </p>
+                  <div>
+                     <a href="https://arxiv.org/pdf/2008.04277.pdf" target="_blank">Pdf</a>
+                     <a href="https://zenodo.org/record/3974927#.X_Wts9gzZPa" target="_blank">data</a>
+                  </div>
+               </div>
+               <!-- way to hide images -->
+                <div class="image">
+                  <img src="./assets/CM_banner.jpg" alt="some_image" />
+               </div> 
+            </div>
+
+            <div class="card">
+               <div class="content">
+                  <!-- INLINE STYLES ARE APPLIED HERE -->
+                  <p>
+                     Aggression and Misogyny Detection using BERT: A Multi-Task Approach
+                  </p>
+                  <p>
+                     in Proceedings of the Second Workshop on Trolling, Aggression and Cyberbullying (TRAC-2020)
+                  </p>
+                  <p>
+                     Niloofar Safi Samghabadi, <span>Parth Patwa</span>, PYKL Srinivas, Prerana Mukherjee, Amitava Das, Thamar Solorio
+                  </p>
+                  <div>
+                     <a href="https://www.aclweb.org/anthology/2020.trac-1.20.pdf" target="_blank">Pdf</a>
+                     <a href="https://github.com/parthpatwa/TRAC-2" target="_blank">code</a>
+                  </div>
+               </div>
+               <div class="image">
+                  <img src="./assets/architecture.png" alt="some_image" />
+               </div>
+            </div>
+
+
+            <div class="card">
+               <div class="content">
+                  <!-- INLINE STYLES ARE APPLIED HERE -->
+                  <p>
+                     Understanding Chat Messages for Sticker Recommendation in Messaging Apps
+                  </p>
+                  <p>
+                     in proceedings of AAAI 2020. Innovative Application Award. 
+                  </p>
+                  <p>
+                     Abhishek Laddha, Mohamed Hanoosh, Debdoot Mukherjee, <span>Parth Patwa</span>, Ankur Narang
+                  </p>
+                  <div>
+                     <a href="https://arxiv.org/pdf/1902.02704.pdf" target="_blank">Pdf</a>
+
+                  </div>
+               </div>
+               <div class="image">
+                  <img src="./assets/clusters_updated_4.png" alt="some_image" />
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="footer">
+         "When something is important enough, you do it even if the odds are not in your favor." - Elon Musk<br />
+         &copy;Copyright. Parth Patwa. 2021. 
+         <a href="#goAbout"><i class="fas fa-chevron-up fa-2x"></i></a>
+      </div>
+   </body>
+</html>
