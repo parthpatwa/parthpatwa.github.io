@@ -1,0 +1,697 @@
+/* ROOT */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* font-family: 'Montserrat', sans-serif;  // USAGE */
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #272935;
+   font-family: "Montserrat", sans-serif;
+}
+
+/* Navbar */
+
+.navbar,
+.responsive {
+   position: fixed;
+   height: 58px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   background: #141622;
+   box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.navbar .logo,
+.responsive .logo {
+   width: 50%;
+   color: white;
+   /* background-color: #444; */
+   float: left;
+   padding-left: 15%;
+   text-decoration: none;
+   font-size: 22px;
+   font-weight: bold;
+}
+
+.navbar .logo span,
+.responsive .logo span {
+   color: #5b85aa;
+}
+
+@media (max-width: 600px) {
+   .navbar .logo,
+   .responsive .logo {
+      width: 50%;
+      padding-left: 5%;
+   }
+}
+
+.navbar ul {
+   float: right;
+   padding-left: 10%;
+}
+
+.navbar ul li {
+   display: inline-block;
+   height: 100%;
+}
+
+.navbar .burgericon,
+.responsive .burgericon {
+   display: none;
+   position: absolute;
+   right: 10%;
+   top: 20px;
+   color: white;
+}
+
+.navbar ul li a {
+   padding: 20px;
+   text-decoration: none;
+   font-size: 15px;
+   color: #aaa;
+   padding: 15px;
+   transition: 0.3s all ease-in-out;
+   margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+   .navbar ul li a {
+      display: none;
+   }
+
+   .navbar .burgericon,
+   .responsive .burgericon {
+      display: block;
+   }
+
+   .responsive .burgericon {
+      top: -49px;
+      right: 8%;
+      padding: a;
+      border-radius: 50%;
+      padding: 10px;
+      background-color: #3c4052;
+   }
+
+   .responsive ul {
+      position: absolute;
+      top: 58px;
+      width: 100%;
+      background-color: #0b0c14;
+   }
+
+   .responsive ul li a {
+      padding: 20px;
+      text-decoration: none;
+      font-size: 15px;
+      color: #aaa;
+      padding: 15px;
+      transition: 0.3s all ease-in-out;
+      margin-bottom: 10px;
+   }
+}
+
+.navbar ul li a.active {
+   color: white;
+}
+
+.navbar ul li a:hover {
+   color: white;
+}
+
+/* FIRST page */
+
+.first {
+   /* height: 122vh; */
+   display: flex;
+   padding-top: 150px;
+   flex-direction: row;
+   justify-content: center;
+   /* align-items: center; */
+}
+
+@media (max-width: 600px) {
+   .first {
+      flex-direction: column;
+      /* height: 300vh; */
+   }
+}
+
+.first .card {
+   /* float: left; */
+   width: 25%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+@media (max-width: 600px) {
+   .first .card {
+      /* float: left; */
+      width: 100%;
+   }
+}
+
+.first .card img {
+   border-radius: 50%;
+   width: 200px;
+   margin-bottom: 30px;
+}
+
+.first .card h1 {
+   color: white;
+   font-size: 22px;
+   margin-bottom: 5px;
+}
+
+.first .card h2 {
+   color: #eee;
+   font-size: 18px;
+   margin-bottom: 5px;
+}
+
+.first .card h3 {
+   color: #5b85aa;
+   font-size: 16px;
+   margin-bottom: 35px;
+}
+
+.social {
+   width: 300px;
+   padding-left: 30px;
+   padding-right: 30px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.social i {
+   color: #5b85aa;
+   font-size: 25px;
+}
+
+.resume {
+   margin-top: 10%;
+   text-decoration: none;
+   padding: 5%;
+   border: 1px solid #5b85aa;
+   color: #5b85aa;
+   font-weight: bold;
+   transition: 0.3s all ease-in-out;
+   /* width: 200px; */
+}
+
+.resume i {
+   padding-left: 20px;
+   padding-right: 10px;
+   transform: scaleX(2);
+}
+
+.resume:hover {
+   color: white;
+   background-color: #5b85aa;
+}
+.first .out_about {
+   /* float: right; */
+   width: 50%;
+   margin-bottom: 5%;
+   /* background-color: #444; */
+}
+
+a:link {
+   color: #5b85aa;
+   text-decoration: none;
+}
+
+a:visited {
+   color: #5b85aa;
+   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+   .first .out_about {
+      /* float: left; */
+      width: 100%;
+      padding: 50px 20px 0 20px;
+      margin-bottom: 15%;
+   }
+}
+
+.first .about {
+   width: 650px;
+}
+
+@media (max-width: 600px) {
+   .first .about {
+      /* float: left; */
+      width: auto;
+   }
+}
+
+.first .about h2 {
+   color: #eee;
+   margin-bottom: 15px;
+}
+
+.first .about p {
+   font-size: 18px;
+   color: #eee;
+   line-height: 25px;
+}
+
+.first .about p span {
+   color: #5b85aa;
+   font-weight: bold;
+}
+
+.first .about p:not(:nth-child(5)) {
+   margin-bottom: 20px;
+}
+
+.about .extra {
+   margin-top: 40px;
+   display: flex;
+   flex-direction: row;
+   font-size: 16px;
+   color: #eee;
+}
+
+@media (max-width: 600px) {
+   .about .extra {
+      flex-direction: column;
+   }
+}
+
+.about .extra span {
+   font-size: 17px;
+   font-weight: bold;
+}
+
+.about .extra .one {
+   /* background-color: #333; */
+   width: 60%;
+}
+
+@media (max-width: 600px) {
+   .about .extra .one {
+      width: 100%;
+   }
+}
+
+.about .extra .one ul {
+   margin-top: 10px;
+   margin-left: 30px;
+}
+
+.about .extra .two {
+   margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+   .about .extra .two {
+      margin-top: 30px;
+      margin-left: 0;
+   }
+}
+
+.about .extra .two p {
+   margin-top: 10px;
+   margin-left: 15px;
+   /* background-color: #666; */
+}
+
+.about .extra .two p span {
+   color: #aaa;
+   font-size: 15px;
+}
+
+.about .extra .two p i {
+   color: #5b85aa;
+}
+
+/* SECOND PAGE */
+
+.second {
+   /* height: 80vh; */
+   width: 100%;
+   background: #23252f;
+   display: flex;
+   flex-direction: row;
+   padding-top: 100px;
+   color: #eee;
+}
+
+@media (max-width: 600px) {
+   .second {
+      flex-direction: column;
+   }
+}
+
+.second .left {
+   width: 38%;
+   text-align: center;
+   height: 100%;
+   /* background: #222; */
+   font-size: 35px;
+   font-weight: bold;
+   color: #ddd;
+}
+
+.second .right {
+   height: 100%;
+   width: 40%;
+   /* background: #777; */
+   font-size: 17px;
+   line-height: 25px;
+   margin-bottom: 5%;
+}
+
+.second .right ul li {
+   margin-bottom: 2%;
+}
+
+.second .right span {
+   color: #5b85aa;
+   font-weight: bold;
+   font-size: 19px;
+}
+
+@media (max-width: 600px) {
+   .second .right {
+      width: 100%;
+      padding: 5% 12%;
+      margin-bottom: 10%;
+   }
+}
+
+.third {
+   /* height: 110vh; */
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   padding-top: 100px;
+   color: #eee;
+}
+
+@media (max-width: 600px) {
+   .third {
+      padding-top: 70px;
+      flex-direction: column;
+   }
+}
+
+.third .left {
+   width: 35%;
+   /* text-align: center; */
+   /* height: 100%; */
+   /* background: #222; */
+   padding-left: 15%;
+   font-size: 35px;
+   font-weight: bold;
+   color: #ddd;
+}
+
+.third .left a {
+   text-decoration: none;
+   color: #5b85aa;
+   font-size: 16px;
+}
+
+.third .left a span {
+   font-weight: bold;
+   color: white;
+}
+
+@media (max-width: 600px) {
+   .third .left {
+      /* width: 60%; */
+      padding-left: 5%;
+      width: 100%;
+      margin-bottom: 25px;
+   }
+}
+
+.third .right {
+   /* height: 100%; */
+   width: 75%;
+   max-width: 900px;
+   /* background: #777; */
+   padding-left: 30px;
+   font-size: 14px;
+   line-height: 25px;
+}
+
+@media (max-width: 600px) {
+   .third .right {
+      width: 100%;
+      padding: 5%;
+   }
+}
+
+.third .right .card {
+   width: 100%;
+   background-color: #555;
+   /* margin-bottom: 10%; */
+}
+
+.third .right .card .content {
+   float: left;
+   width: 70%;
+   margin-bottom: 5%;
+}
+
+.third .right .card .content p:nth-child(1) {
+   /* color: #5b85aa; */
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 10px;
+   letter-spacing: 1px;
+}
+
+.third .right .card .content p:nth-child(2) {
+   font-size: 16px;
+   margin-bottom: 10px;
+   color: white;
+}
+
+.third .right .card .content p:nth-child(3) {
+   color: #777;
+   font-size: 14px;
+   color: #5b85aa;
+   margin-bottom: 5px;
+}
+
+.third .right .card .content p:nth-child(3) span {
+   font-size: 14px;
+   font-weight: bold;
+   /* border-bottom: 1px solid #5b85aa; */
+   padding: 2px 5px;
+}
+
+@media (max-width: 600px) {
+   .third .right .card .content {
+      width: 83%;
+   }
+}
+
+.third .right .card .content div a {
+   display: inline;
+   border: 1px solid #5b85aa;
+   border-radius: 4px;
+   text-decoration: none;
+   color: #5b85aa;
+   padding: 3px 8px;
+   font-size: 11px;
+   transition: 0.3s all ease-in-out;
+   margin-right: 5px;
+}
+
+.third .right .card .content div a:hover {
+   background-color: #5b85aa;
+   color: white;
+}
+
+.third .right .card .image {
+   float: right;
+   width: 25%;
+   /* background-color: #888; */
+}
+
+.third .right .card .image img {
+   width: 100%;
+   max-height: 150px;
+}
+
+@media (max-width: 600px) {
+   .third .right .card .image {
+      width: 15%;
+   }
+
+   .third .right .card .image img {
+      width: 100%;
+   }
+}
+
+.footer {
+   margin-top: 10%;
+   background-color: #23252f;
+   display: flex;
+   position: relative;
+   justify-content: center;
+   align-items: center;
+   height: 15vh;
+   font-size: 16px;
+   color: #888;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   text-align: center;
+}
+
+.footer a {
+   position: absolute;
+   bottom: 28%;
+   right: 2%;
+   border-radius: 50%;
+   padding: 15px;
+}
+
+@media (max-width: 600px) {
+   .footer {
+      margin-top: 20%;
+      padding: 13%;
+      height: 28vh;
+   }
+   .footer a {
+      background-color: #3c4052;
+   }
+}
+
+.footer a:hover {
+   background-color: #3c4052;
+}
+
+.footer a i {
+   color: white;
+   font-size: 15px;
+}
+
+/* -------------------------------------------------- */
+/* optional space CSS */
+
+/* WORK SECTION */
+.fourth {
+   /* height: 110vh; */
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   padding-top: 100px;
+   color: #eee;
+}
+
+@media (max-width: 600px) {
+   .fourth {
+      padding-top: 70px;
+      flex-direction: column;
+   }
+}
+
+.fourth .left {
+   width: 35%;
+   /* text-align: center; */
+   /* height: 100%; */
+   /* background: #222; */
+   padding-left: 15%;
+   font-size: 35px;
+   font-weight: bold;
+   color: #ddd;
+}
+
+@media (max-width: 600px) {
+   .fourth .left {
+      /* width: 60%; */
+      padding-left: 5%;
+      margin-bottom: 25px;
+   }
+}
+
+.fourth .right {
+   /* height: 100%; */
+   width: 55%;
+   max-width: 700px;
+   /* background: #777; */
+   padding-left: 30px;
+   font-size: 14px;
+   line-height: 25px;
+   margin-bottom: 5%;
+}
+
+@media (max-width: 600px) {
+   .fourth .right {
+      width: 100%;
+      padding: 5%;
+   }
+}
+
+/* TEACHING SECTION */
+.fifth {
+   /* height: 110vh; */
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   padding-top: 100px;
+   color: #eee;
+   background-color: #23252f;
+}
+
+@media (max-width: 600px) {
+   .fifth {
+      padding-top: 70px;
+      flex-direction: column;
+   }
+}
+
+.fifth .left {
+   width: 35%;
+   /* text-align: center; */
+   /* height: 100%; */
+   /* background: #222; */
+   padding-left: 15%;
+   font-size: 35px;
+   font-weight: bold;
+   color: #ddd;
+}
+
+@media (max-width: 600px) {
+   .fifth .left {
+      /* width: 60%; */
+      padding-left: 5%;
+      margin-bottom: 25px;
+   }
+}
+
+.fifth .right {
+   /* height: 100%; */
+   width: 55%;
+   max-width: 700px;
+   /* background: #777; */
+   padding-left: 30px;
+   font-size: 14px;
+   line-height: 25px;
+   margin-bottom: 5%;
+}
+
+@media (max-width: 600px) {
+   .fifth .right {
+      width: 100%;
+      padding: 5%;
+   }
+}
+
+/* UNDERLINE PARTH PATWA NAME IN p of Publications */
+/* .third .right .card .content p:nth-child(3) span {
+   border-bottom: 1px solid #5b85aa;
+} */
